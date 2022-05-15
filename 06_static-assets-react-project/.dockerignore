@@ -1,0 +1,5 @@
+.git/
+node_modules/
+build/
+
+# don't copy over any files and directories you don't need to build the app...such as previous build directories
