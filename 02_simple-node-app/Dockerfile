@@ -2,12 +2,17 @@ FROM node:12-stretch
 
 # node images have a "node user".  it's home dir is at /home/node.  this is simply built into the node image...not all images have built-in users
 USER node
+# here is how a user group and user would be added if the official Node image didn't already do it for you:
+# RUN addgroup -S node && adduser -S node -G node
+# then after that you would include:
+# USER node
 
 # basically setting the variable "WORKDIR"...where the files will be copied to
 # "src" is a directory that will be created
 WORKDIR /home/node/src
 
-# set user permissions before copying the file over, otherwise has root-user permissions
+# set user permissions to user-group "node" and user "node" before copying the file over, otherwise has root-user permissions
+# the "." represents the WORKDIR variable, which is set to "/home/node/src"
 COPY --chown=node:node index.js .
 
 CMD ["node", "/home/node/code/index.js"]

@@ -21,4 +21,4 @@ CMD ["node", "index.js"]
 # RUN
 # docker run --init --rm -p 3000:3000 node-app
 
-# changing to "alpine" is good for production deploys.  however, b/c it's very stripped-down it's missing a lot of functionality you may want if using the container in development...such as missing a full version of bash.  you can also create a "dev" Dockerfile and container
+# changing to "alpine" is good for production deploys.  however, b/c it's very stripped-down it's missing a lot of functionality you may want if using the container in development...such as missing a full version of bash (actually, it doesn't use bash...it uses "ash" or just "sh").  you can also create a "dev" Dockerfile and container
