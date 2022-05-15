@@ -1,0 +1,26 @@
+{
+  "name": "intro-to-containers",
+  "version": "1.0.0",
+  "description": "FEM course",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ndstephens/intro-to-containers.git"
+  },
+  "keywords": [
+    "docker"
+  ],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ndstephens/intro-to-containers/issues"
+  },
+  "homepage": "https://github.com/ndstephens/intro-to-containers#readme",
+  "dependencies": {
+    "@hapi/hapi": "^20.2.2",
+    "hapi-pino": "^9.3.0"
+  }
+}
