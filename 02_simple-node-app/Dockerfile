@@ -15,7 +15,7 @@ WORKDIR /home/node/src
 # the "." represents the WORKDIR variable, which is set to "/home/node/src"
 COPY --chown=node:node index.js .
 
-CMD ["node", "/home/node/code/index.js"]
+CMD ["node", "/home/node/src/index.js"]
 
 # BUILD
 # docker build -t node-app .

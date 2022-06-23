@@ -15,6 +15,7 @@ RUN npm ci && npm run build
 # could also use "nginx:alpine"
 FROM nginx:latest
 # copy the "/app/build" directory from the previous stage into the default directory that nginx uses for serving static content
+# the default nginx CMD will immediately run and serve whatever is in the "/usr/share/nginx/html" directory...that's why we don't supply a CMD ourselves
 COPY --from=build /app/build /usr/share/nginx/html
 
 # BUILD
