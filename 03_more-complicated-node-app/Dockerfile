@@ -22,7 +22,7 @@ RUN npm ci
 # The first COPY pulls just the package.json and the package-lock.json which is just enough to do the npm ci. After that we nab the rest of the files. Now if you make changes you avoid doing a full npm install. This is useful and recommended for any dependency installation: apt-get, pip, cargo, gems, etc. as well as any long-running command like building some from source.
 COPY --chown=node:node . .
 
-# The command can simply be "index.js" and not "/home/node/src/index.js" since it expects it to be in the "src" directory
+# The command can simply be "index.js" and not "/home/node/src/index.js" since it expects it to be in the "src" directory (since WORKDIR is set to "/home/node/src")
 CMD ["node", "index.js"]
 
 # BUILD
